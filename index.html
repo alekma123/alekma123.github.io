@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mars</title>
+    <!-- reset styles -->
+    <link rel="stylesheet" href="assets/lib/bootstrap-reboot.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/dist/main.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header__logo">
+                    <img src="/logo.svg" alt="">
+                </a>
+                <nav class="header__nav" id="topnav">
+                    <div class="wrapper-topnav">
+                        <ul>
+                            <li><a href="#">О марсе</a></li>
+                            <li><a href="#">Процесс</a></li>
+                            <li><a href="#">Билеты</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <button class="btn">Купить билеты</button>
+                    </div>
+                    <i class="icon icon-burger" onclick="openMenu()">
+                        <div class="icon-container" onclick="animation(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </i>
+                </nav>
+            </div>
+        </header>
+
+        <section id="banner">
+            <div class="container">
+                <div class="banner-text">Точка назначеия:</div>
+                <!-- <div class="banner-title">Марс</div> -->
+
+                <svg style="opacity:0;position:fixed;z-index:-999" viewBox="0 0 1 1">
+                    <defs>
+                        <clipPath id="clip" clipPathUnits="objectBoundingBox">
+                            <text x="0.5" y="0.5" font-size="0.22" text-anchor="middle"
+                                alignment-baseline="middle">OCEAN</text>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <video width="100%" height="100%" autoplay muted>
+                    <source src="./Mars.m4v" type="video/mp4">
+                </video>
+
+
+                <!-- <h1 class="text-animate">MAPC</h1> -->
+
+            </div>
+        </section>
+
+        <section id="test">
+            <div class="test-h">
+                <video autoplay playsinline muted loop preload
+                    poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
+                    <source src="./Mars.m4v"/>
+                </video>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <mask id="mask" x="0" y="0" width="100%" height="100%">
+                            <rect x="0" y="0" width="100%" height="100%" />
+                            <text x="72" y="50">OCEAN</text>
+                        </mask>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" />
+                </svg>
+            </div>
+        </section>
+
+    </div>
+    <script src="assets/dist/main.js"></script>
+</body>
+
+</html>

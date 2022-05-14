@@ -1,0 +1,31 @@
+#topnav {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    display: flex;
+    // align-items: center;
+    align-items: flex-start;
+    text-transform: uppercase;
+    
+    a {
+        color: #F2E1C2;
+    }
+    a:hover {
+        color: #F23207;
+        text-decoration: none;
+    }
+    .wrapper-topnav {
+        display: flex;
+    }
+    &.mobile-menu {
+        ul {
+            display: block;
+        }
+        .wrapper-topnav {
+            flex-direction: column;
+        }
+    }
+}

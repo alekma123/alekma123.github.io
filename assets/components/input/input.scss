@@ -1,0 +1,26 @@
+.btn {
+    background: #F2E1C2;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    padding: 10px 15px;
+    border:none;
+}
+
+.btn:hover{
+    background:#F23207;
+    color: #F2E1C2;
+}

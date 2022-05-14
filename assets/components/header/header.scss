@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.22vw;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    
+    .container{
+        justify-content: space-between;
+    }
+}
+
+.header__logo {
+    //background-image: url(/logo.svg);
+    max-width: 82px;
+    max-height: 36px;
+
+    width: 82px;
+    height: 35px;
+}
+.header__nav {
+    display: flex;
+}
+.header__nav ul {
+    margin: auto 25px;
+    padding: 0px;
+
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__nav ul li {
+    margin: 0 15px;
+}
+
+

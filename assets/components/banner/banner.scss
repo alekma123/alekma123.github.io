@@ -1,0 +1,75 @@
+#banner {
+    background-image: url('/assets/img/fon.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    .container {
+        flex-direction: column;
+        padding-top: 9.79vw;
+    }
+
+    .text-animate {
+        font-family: 'Bebas Neue', cursive;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 715.255px;
+        line-height: 715px;
+        text-align: center;
+        letter-spacing: -0.015em;
+      
+        color: transparent;
+        background-image: url(/assets/img/Mars_Moment.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        
+    }
+
+
+    svg{
+        font-family: impact, sans-serif;
+      }
+      video {
+        -webkit-clip-path: url(#clip);
+        clip-path: url(#clip);
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+      }
+}
+
+#test{
+        background: lightgrey;
+        margin: 2rem;
+     
+      .test-h { 
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        max-width: 1200px;
+      }
+      .test-h video { width: 100%; }
+      svg { 
+        width: 100%;
+        position:absolute;
+        top: 0;
+        left: 0; // needed for FF, Safari, Edge
+        height: 100%;
+      }
+      svg text {
+        font-family: Biko, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 38px;
+      }
+      svg rect {
+        fill: white;
+      }
+      svg > rect {
+          -webkit-mask: url(#mask);
+          mask: url(#mask);
+      }
+}
