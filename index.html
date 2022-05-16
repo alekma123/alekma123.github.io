@@ -12,8 +12,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/dist/main.css">
 </head>
@@ -81,8 +80,8 @@
         <section id="popup">
             <div class="container">
                 <div class="wrapper">
-                    <div class="popup-header fontsize">
-                        <h1 class="popup-title text">Бронирование билетов</h1>
+                    <div class="popup-header">
+                        <h1 class="popup-title">Бронирование билетов</h1>
                         <div class="close">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="32" height="32" fill="#262526"/>
@@ -94,20 +93,23 @@
                     <div class="popup-content">
                         <form action="">
                             <div class="form__input">
-                                <div class="input">
+                                <div class="input-control">
                                     <label for="date_arrival">Дата заезда</label>
                                     <input type="date" name="date_arrival" id="date_arrival" value="13.05.2022">
                                 </div>
-                                <div class="input">
+                                <div class="input-control">
                                     <label for="date_departure ">Дата выезда</label>
                                     <input type="date" name="date_departure " id="date_departure " value="23.05.2022">
                                 </div>
-                                <div class="input">
+                                <div class="input-control">
                                     <label for="total-people">Количесво</label>
                                     <input type="number" name="total-people" id="total-people" value="1">
                                 </div>
                             </div>
-                            <button class="btn btn_dark">Купить билеты</button>
+                            <!-- <div class="input-control"> -->
+                                <button class="btn btn_dark input-control"
+                                type="submit" >Купить билеты</button>
+                            <!-- </div> -->
                         </form>
                     </div>
                 </div>

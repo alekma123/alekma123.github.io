@@ -5,20 +5,20 @@
     height: 100vh;
     z-index: 999;
     visibility: hidden;
+    background: #F2E1C2;
 
     &.popupBuyTicket_open{
         visibility: visible;
     }
     .container{
-        background: #F2E1C2;
         width: 100%;
         height: 100%;
         position: absolute;
-        max-width: unset;
-        padding: unset;
+        left: 0;
+        right: 0;
+        padding: 6.9vw 8.4vw;
     }
     .wrapper {
-        padding: 6.9vw 8.4vw;
         width: 100%;
     }
     .popup-header{
@@ -28,14 +28,13 @@
         .popup-title {
             max-width: 588px;
             width: 100%;
-        }
-        h1 {
-            // font-family: 'Bebas Neue';
+            // font-family:"Bebas Neue";
             font-style: normal;
             font-weight: 700;
-            // font-size: 114px;
-            font-size: min(7.9vw, 114px);
-            line-height: min(7.9vw, 114px);
+            // font-size: min(7.9vw, 114px);
+            // line-height: min(7.9vw, 114px);
+            font-size: clamp(16px, 3.9vw, 114px);
+            line-height: clamp(16px, 3.9vw, 114px);
             display: flex;
             align-items: center;
             letter-spacing: 0.025em;
@@ -45,16 +44,32 @@
         }
     }
     .popup-content {
+        margin-top: min(5.55vw, 80px);
         .form__input{
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: min(4.16vw, 60px);
 
-            .input {
-                display: flex;
-                flex-direction: column;
+        }
+        .input-control {
+            display: flex;
+            flex-direction: column;
+            width: 32.17%;
+            
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            } 
+        }
+        // .input-control:not([type=submot]){
+        //     background: none;
+        //     border: none;
+        //     border-bottom: 2px solid black;
+        // }
+        }
 
-                width: 30%;
-                
-            }
+        form .btn {
+            float: right;
         }
     }
 
