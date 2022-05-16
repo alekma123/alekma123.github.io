@@ -6,7 +6,6 @@
 
     .container {
         flex-direction: column;
-        padding-top: 9.79vw;
     }
 
     .text-animate {
@@ -28,12 +27,31 @@
         
     }
 
+    svg {
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    svg#line{
+      left: 0;
+      right: unset;
+      width: unset;
 
-    svg{
-        font-family: 'Bebas Neue', cursive;
+      height: min(57.65vw,715.255px);
+      position: absolute;
+      top: 0px;
+      margin: unset;
+    }
+    svg text{
+        font-family: 'Bebas Neue';
         font-style: normal;
         font-weight: 400;
-        font-size: 715.255px;
+        font-size: min(57.65vw,715.255px);
         line-height: 715px;
         text-align: center;
         letter-spacing: -0.015em;
@@ -41,41 +59,76 @@
       video {
         -webkit-clip-path: url(#clip);
         clip-path: url(#clip);
-        width: 100%;
-        position: absolute;
-        z-index: 1;
       }
+
+      .wrapper-container {
+        position: relative;
+        width: 100%;
+        top: 125px;
+      }
+
+      .banner-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: min(2.5vw, 36px);
+        line-height: 44px;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+
+        color: #F23207;
+
+      }
+
+
+    .smoke{
+      background-image: url(/assets/img/smoke.png);
+      background-size: cover;
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0.8;
+      filter: blur(15px);
+      -webkit-filter: blur(15px);
+      animation: smoke1 4s infinite;
+      -webkit-animation: smoke1 4s infinite;
+      transition-duration: 0.5s all;
 }
 
-#test{
-        background: lightgrey;
-        margin: 2rem;
-     
-      .test-h { 
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        max-width: 1200px;
-      }
-      .test-h video { width: 100%; }
-      svg { 
-        width: 100%;
-        position:absolute;
-        top: 0;
-        left: 0; // needed for FF, Safari, Edge
-        height: 100%;
-      }
-      svg text {
-        font-family: Biko, sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 38px;
-      }
-      svg rect {
-        fill: white;
-      }
-      svg > rect {
-          -webkit-mask: url(#mask);
-          mask: url(#mask);
-      }
+@keyframes smoke1 {
+  0% {
+    background-position: 100vw;
+    opacity: 0;
+    animation-timing-function: 'ease-in';
+  } 
+  50% {
+    background-position: 50vw;
+    opacity: 1;
+    animation-timing-function: 'ease-out';
+  }
+  100% {
+    background-position: 0vw;
+    opacity: 0;
+    animation-timing-function: 'ease-in';
+  }
 }
+@keyframes smoke2 {
+  from {
+    background-position: 100vw;
+    opacity: 0;
+    animation-timing-function: 'ease-in';
+  }
+  
+  to {
+    background-position: 0vw;
+    opacity: 1;
+    animation-timing-function: 'ease-in';
+  }
+}
+}
+
+

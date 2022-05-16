@@ -34,7 +34,7 @@
                             <li><a href="#">Новости</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
-                        <button class="btn">Купить билеты</button>
+                        <button class="btn" id="popupBuyTicket">Купить билеты</button>
                     </div>
                     <i class="icon icon-burger" onclick="openMenu()">
                         <div class="icon-container" onclick="animation(this)">
@@ -48,46 +48,71 @@
         </header>
 
         <section id="banner">
+            <div class="smoke"></div>
             <div class="container">
-                <!-- <div class="banner-text">Точка назначеия:</div> -->
-                <!-- <div class="banner-title">Марс</div> -->
+                <div class="wrapper-container">
+                    <div class="content">
+                        <svg width="6" height="600" viewBox="0 0 6 600" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            id="line">
+                            <path d="M2 3H4V600H2V3Z" fill="#D9D9D9" />
+                            <circle cx="3" cy="3" r="3" fill="#D9D9D9" />
+                        </svg>
 
-                <svg style="opacity:0;position:fixed;z-index:-999" viewBox="0 0 1 1">
-                    <defs>
-                        <clipPath id="clip" clipPathUnits="objectBoundingBox">
-                            <text x="0.5" y="0.5" font-size="0.22" text-anchor="middle"
-                                alignment-baseline="middle">MAPC</text>
-                        </clipPath>
-                    </defs>
-                </svg>
+                        <div class="content-text">
+                            <div class="banner-text">Точка назначеия:</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <defs>
+                                    <clipPath id="clip">
+                                        <text x="0" y="0" fill="blue" alignment-baseline="hanging">MAPC</text>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <video autoplay muted loop>
+                                <source src="./Mars.m4v">
+                            </video>
+                        </div>
 
-                <video width="100%" height="100%" autoplay muted>
-                    <source src="./Mars.m4v" type="video/mp4">
-                </video>
+                    </div>
 
-
-                <!-- <h1 class="text-animate">MAPC</h1> -->
-
+                </div>
             </div>
         </section>
 
-        <!-- <section id="test">
-            <div class="test-h">
-                <video autoplay playsinline muted loop preload
-                    poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
-                    <source src="./Mars.m4v"/>
-                </video>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                        <mask id="mask" x="0" y="0" width="100%" height="100%">
-                            <rect x="0" y="0" width="100%" height="100%" />
-                            <text x="72" y="50">OCEAN</text>
-                        </mask>
-                    </defs>
-                    <rect x="0" y="0" width="100%" height="100%" />
-                </svg>
+        <section id="popup">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="popup-header fontsize">
+                        <h1 class="popup-title text">Бронирование билетов</h1>
+                        <div class="close">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="32" height="32" fill="#262526"/>
+                                <path d="M10 11.7143L11.7143 10L22 20.2857L20.2857 22L10 11.7143Z" fill="#D9D9D9"/>
+                                <path d="M11.7143 22L10 20.2857L20.2857 10L22 11.7143L11.7143 22Z" fill="#D9D9D9"/>
+                                </svg> 
+                        </div>
+                    </div>
+                    <div class="popup-content">
+                        <form action="">
+                            <div class="form__input">
+                                <div class="input">
+                                    <label for="date_arrival">Дата заезда</label>
+                                    <input type="text" name="date_arrival" id="date_arrival" value="13.05.2022">
+                                </div>
+                                <div class="input">
+                                    <label for="date_departure ">Дата выезда</label>
+                                    <input type="text" name="date_departure " id="date_departure " value="23.05.2022">
+                                </div>
+                                <div class="input">
+                                    <label for="total-people">Количесво</label>
+                                    <input type="text" name="total-people" id="total-people" value="1">
+                                </div>
+                            </div>
+                            <button>Купить билеты</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </section> -->
+        </section>
 
     </div>
     <script src="assets/dist/main.js"></script>

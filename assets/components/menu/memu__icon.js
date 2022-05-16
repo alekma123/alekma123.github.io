@@ -27,3 +27,13 @@ function createMenuIcon() {
 
 createMenuIcon();
 */
+
+
+function isOverflown(element) {
+    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
+
+el = document.querySelector('nav#topnav');
+
+let res = isOverflown(el);
+console.log('isOverflown: ', el);

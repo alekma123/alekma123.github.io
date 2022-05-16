@@ -19,13 +19,45 @@
     }
     .wrapper-topnav {
         display: flex;
+        flex-direction: row;
     }
-    &.mobile-menu {
-        ul {
-            display: block;
-        }
+    .icon {
+        display: none;
+    }
+    @media screen and (max-width:640px){
         .wrapper-topnav {
-            flex-direction: column;
+            display: none;
         }
-    }
+        .icon {
+            display: block;
+            position: relative;
+            z-index: 3;
+        }
+        &.mobile-menu_open {
+            ul {
+                display: block;
+            }
+            .wrapper-topnav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                position: absolute;
+                background: black;
+                width: 100vw;
+                left: 0;
+                top: 0;
+                z-index: 2;
+
+                ul li {
+                    padding: 5vw;
+                }
+            }
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    } 
+    
 }
