@@ -18,9 +18,24 @@
 
     padding: 10px 15px;
     border:none;
+    
+    &.btn_light {
+        background: #F2E1C2;
+        color: #262526;
+    }
+    &.btn_dark {
+        background: #262526;
+        color: #F2E1C2;
+    }
+    
+    &.btn:hover{
+        background:#F23207;
+        color: #F2E1C2;
+    }
+    
+    &.btn.btn_light:hover{
+        background:#F23207;
+        color: #F2E1C2;
+    }
 }
 
-.btn:hover{
-    background:#F23207;
-    color: #F2E1C2;
-}
