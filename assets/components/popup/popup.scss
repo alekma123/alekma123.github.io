@@ -6,9 +6,16 @@
     z-index: 999;
     visibility: hidden;
     background: #F2E1C2;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+        &.popupBuyTicket_open{
+    -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+    -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
+    -ms-transition: opacity 0.5s ease, visibility 0.5s ease;
+    -o-transition: opacity 0.5s ease, visibility 0.5s ease;
 
-    &.popupBuyTicket_open{
         visibility: visible;
+        opacity: 1;
     }
     .container{
         width: 100%;
@@ -31,8 +38,6 @@
             // font-family:"Bebas Neue";
             font-style: normal;
             font-weight: 700;
-            // font-size: min(7.9vw, 114px);
-            // line-height: min(7.9vw, 114px);
             font-size: clamp(16px, 3.9vw, 114px);
             line-height: clamp(16px, 3.9vw, 114px);
             display: flex;
@@ -41,31 +46,47 @@
             text-transform: uppercase;
 
             color: #262526;
+            padding-right: 20px;
         }
     }
     .popup-content {
-        margin-top: min(5.55vw, 80px);
+        margin-top: clamp(42.7px, 5.55vw, 80px);
         .form__input{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: min(4.16vw, 60px);
-
+            color: #262526;
         }
         .input-control {
             display: flex;
             flex-direction: column;
             width: 32.17%;
+            margin-bottom: clamp(32px, 4.16vw, 60px);
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+
+            input{
+                line-height: 20px;
+                padding: 0 0 5px 0;
+                outline:none;
+            }
+
+            label{
+                font-weight: 700;
+            }
             
             @media screen and (max-width: 768px) {
                 width: 100%;
             } 
         }
-        // .input-control:not([type=submot]){
-        //     background: none;
-        //     border: none;
-        //     border-bottom: 2px solid black;
-        // }
+        .input-control input:not([type="submit"]){
+            background: none;
+            border: none;
+            border-bottom: 2px solid #262526;
         }
 
         form .btn {

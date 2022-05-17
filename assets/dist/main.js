@@ -1,51 +1,57 @@
+const bannerTitle = null;
+const bannerText = null;
+const bannerLineSVG = null;
+const background =  null;
+
+
+window.addEventListener("load", function(event) {
+    this.bannerTitle = this.document.querySelector('#banner-title_anime');
+    this.bannerText = this.document.querySelector('#banner-text_anime');
+    this.bannerLineSVG = this.document.querySelector('#banner-line_anime');
+    this.background = this.document.querySelector('#banner');
+    
+    setTimeout(offsetBackground, 1);
+    setTimeout(bannerTextShow, 1000);
+    setTimeout(bannerLineSVGShow, 1000);
+    setTimeout(bannerTitleShow, 2000);
+});
+
+
+function bannerTitleShow() {
+    this.bannerTitle.style.opacity = 1;
+
+}
+function bannerTextShow() {
+    this.bannerText.style.opacity = 1;
+}
+function bannerLineSVGShow() {
+    this.bannerLineSVG.style.opacity = 1;
+    this.bannerLineSVG.style.height = "87%";
+    let circle = this.document.querySelector('#banner-line_anime #endline');
+    
+    setTimeout(() => {
+        circle.style.opacity = 1;
+    }, 1200);
+}
+
+function offsetBackground(){
+    this.background.setAttribute("style", "background-position-x: -960px;");
+}
+
+
+  
 const spaceFon = document.getElementById("banner");
- 
-//При движении мышью вызываем функцию, которая меняет положение фона
+
 document.addEventListener("mousemove", function (e) { MoveBackground(e); });
  
 function MoveBackground(e)
 {
-   //Рассчитываем, насколько далеко от начала оси находится курсор: 0 - 0, 0.5 - середина экрана, 1 - ширина экрана (например, 1920)
-   //Затем умножаем получившееся число на 30 - настолько будет сдвигаться фон
-   //Например, если курсор находится посередине страницы (0.5), то при умножении получится 15
-   //Далее отнимаем половину от 30, чтобы фон мог двигаться как влево, так и вправо
    let offsetX = (e.clientX / window.innerWidth * 30) - 15;
    let offsetY = (e.clientY / window.innerHeight * 10) - 5;
  
-   //Меняем положение фона
    spaceFon.setAttribute("style", "background-position: " + offsetX + "px " + offsetY + "px;");
 }
 
-const popupBuyTicket = document.querySelector("#popup");
-const openPopup = document.querySelector('#popupBuyTicket');
-const closePopup = document.querySelector('#popup .close');
-
-
-closePopup.addEventListener('click', function(event){
-    popupBuyTicket.classList.toggle("popupBuyTicket_open");
-})
-
-openPopup.addEventListener('click', function(event){
-    popupBuyTicket.classList.toggle("popupBuyTicket_open");
-})
-
-console.log(popupBuyTicket.classList);
-
-
-
-/*
-function fontsize() {
-    let block = document.querySelector('.fontsize');
-    let text = document.querySelector('.fontsize .text');
-    let w = text.offsetWidth;
-    text.style.fontSize = w/5 + "px";
-    //text.style.top = w/38 + "px";
-    //text.style.left = w/9 + "px";
-
-    console.log("fontSize: ", w);
-}
-window.onload = fontsize;
-window.onresize = fontsize;  */
 function animation(x) {
     x.classList.toggle("change");
   }
@@ -77,14 +83,7 @@ createMenuIcon();
 */
 
 
-function isOverflown(element) {
-    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
-}
 
-el = document.querySelector('nav#topnav');
-
-let res = isOverflown(el);
-console.log('isOverflown: ', el);
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -121,4 +120,34 @@ window.addEventListener('resize', function() {
     responseveMenu();
 })
 */
+const popupBuyTicket = document.querySelector("#popup");
+const openPopup = document.querySelector('#popupBuyTicket');
+const closePopup = document.querySelector('#popup .close');
+
+
+closePopup.addEventListener('click', function(event){
+    popupBuyTicket.classList.toggle("popupBuyTicket_open");
+
+    console.log("close");
+})
+
+openPopup.addEventListener('click', function(event){
+    popupBuyTicket.classList.toggle("popupBuyTicket_open");
+})
+
+
+
+/*
+function fontsize() {
+    let block = document.querySelector('.fontsize');
+    let text = document.querySelector('.fontsize .text');
+    let w = text.offsetWidth;
+    text.style.fontSize = w/5 + "px";
+    //text.style.top = w/38 + "px";
+    //text.style.left = w/9 + "px";
+
+    console.log("fontSize: ", w);
+}
+window.onload = fontsize;
+window.onresize = fontsize;  */
 //# sourceMappingURL=main.js.map

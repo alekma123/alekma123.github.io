@@ -51,24 +51,31 @@
             <div class="container">
                 <div class="wrapper-container">
                     <div class="content">
-                        <svg width="6" height="600" viewBox="0 0 6 600" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        <svg id="banner-line_anime" class="banner-line" width="6" height="600" viewBox="0 0 6 600" fill="none" xmlns="http://www.w3.org/2000/svg"
                             id="line">
-                            <path d="M2 3H4V600H2V3Z" fill="#D9D9D9" />
-                            <circle cx="3" cy="3" r="3" fill="#D9D9D9" />
-                        </svg>
+                            <g>
+                                <path d="M2 3H4V600H2V3Z" fill="#D9D9D9" />
+                                <circle cx="3" cy="3" r="3" fill="#D9D9D9" />
+                                <circle cx="3" cy="597" r="3"
+                                fill="#D9D9D9"
+                                id="endline"/>
+                            </g>
+                        </svg>                
 
                         <div class="content-text">
-                            <div class="banner-text">Точка назначеия:</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                                <defs>
-                                    <clipPath id="clip">
-                                        <text x="0" y="0" fill="blue" alignment-baseline="hanging">MAPC</text>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <video autoplay muted loop>
-                                <source src="./Mars.m4v">
-                            </video>
+                            <div class="banner-text" id="banner-text_anime">Точка назначеия:</div>
+                            <div id="banner-title_anime">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                    <defs>
+                                        <clipPath id="clip">
+                                            <text x="0" y="0" fill="blue" alignment-baseline="hanging">MAPC</text>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <video autoplay muted loop poster="/assets/img/Mars_Moment.jpg">
+                                    <source src="./Mars.m4v">
+                                </video>
+                            </div>
                         </div>
 
                     </div>
@@ -95,21 +102,21 @@
                             <div class="form__input">
                                 <div class="input-control">
                                     <label for="date_arrival">Дата заезда</label>
-                                    <input type="date" name="date_arrival" id="date_arrival" value="13.05.2022">
+                                    <input type="date" name="date_arrival" id="date_arrival" value="13.05.2022"
+                                    required>
                                 </div>
                                 <div class="input-control">
                                     <label for="date_departure ">Дата выезда</label>
-                                    <input type="date" name="date_departure " id="date_departure " value="23.05.2022">
+                                    <input type="date" name="date_departure " id="date_departure " 
+                                    required>
                                 </div>
                                 <div class="input-control">
                                     <label for="total-people">Количесво</label>
-                                    <input type="number" name="total-people" id="total-people" value="1">
+                                    <input type="number" name="total-people" id="total-people" value="1" min="1">
                                 </div>
                             </div>
-                            <!-- <div class="input-control"> -->
                                 <button class="btn btn_dark input-control"
                                 type="submit" >Купить билеты</button>
-                            <!-- </div> -->
                         </form>
                     </div>
                 </div>

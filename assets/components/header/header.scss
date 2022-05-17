@@ -14,12 +14,13 @@
 }
 
 .header__logo {
-    //background-image: url(/logo.svg);
     max-width: 82px;
     max-height: 36px;
-
-    width: 82px;
+    width: 6.69vw;
     height: 35px;
+    min-width: 35px;
+
+    img{ width: 100%;}
 }
 .header__nav {
     display: flex;
