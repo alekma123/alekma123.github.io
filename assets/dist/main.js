@@ -4,7 +4,6 @@ document.addEventListener("mousemove", function (e) { MoveBackground(e); });
  
 function MoveBackground(e)
 {
-   //let offsetX = (e.clientX / window.innerWidth * 30) - 15;
    let offsetX = (e.clientX / window.innerWidth * 960) - 480;
    let offsetY = (e.clientY / window.innerHeight * 10) - 5;
  
@@ -104,26 +103,7 @@ function openMenu(){
   x.classList.toggle("mobile-menu_open");
 }
 
-/*
-function responseveMenu(){
-    let topnav = document.querySelector('#topnav');
-    let height = topnav.clientHeight;
 
-    if (height > 44) {
-        // add responsive menu class
-        topnav.classList.add("mobile-menu");
-
-    }  else {
-        // del responsive menu class
-        topnav.classList.remove("mobile-menu");
-    } 
-    console.log("topNav height: ", height);
-}
-
-window.addEventListener('resize', function() {
-    responseveMenu();
-})
-*/
 const popupBuyTicket = document.querySelector("#popup");
 const openPopup = document.querySelector('#popupBuyTicket');
 const closePopup = document.querySelector('#popup .close');
@@ -140,18 +120,4 @@ openPopup.addEventListener('click', function(event){
 })
 
 
-
-/*
-function fontsize() {
-    let block = document.querySelector('.fontsize');
-    let text = document.querySelector('.fontsize .text');
-    let w = text.offsetWidth;
-    text.style.fontSize = w/5 + "px";
-    //text.style.top = w/38 + "px";
-    //text.style.left = w/9 + "px";
-
-    console.log("fontSize: ", w);
-}
-window.onload = fontsize;
-window.onresize = fontsize;  */
 //# sourceMappingURL=main.js.map

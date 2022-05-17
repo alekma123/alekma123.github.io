@@ -14,23 +14,3 @@ function openMenu(){
   x.classList.toggle("mobile-menu_open");
 }
 
-/*
-function responseveMenu(){
-    let topnav = document.querySelector('#topnav');
-    let height = topnav.clientHeight;
-
-    if (height > 44) {
-        // add responsive menu class
-        topnav.classList.add("mobile-menu");
-
-    }  else {
-        // del responsive menu class
-        topnav.classList.remove("mobile-menu");
-    } 
-    console.log("topNav height: ", height);
-}
-
-window.addEventListener('resize', function() {
-    responseveMenu();
-})
-*/

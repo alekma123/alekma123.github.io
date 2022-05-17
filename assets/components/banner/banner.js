@@ -4,7 +4,6 @@ document.addEventListener("mousemove", function (e) { MoveBackground(e); });
  
 function MoveBackground(e)
 {
-   //let offsetX = (e.clientX / window.innerWidth * 30) - 15;
    let offsetX = (e.clientX / window.innerWidth * 960) - 480;
    let offsetY = (e.clientY / window.innerHeight * 10) - 5;
  
