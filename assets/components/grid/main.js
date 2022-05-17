@@ -10,12 +10,15 @@ window.addEventListener("load", function(event) {
     this.bannerLineSVG = this.document.querySelector('#banner-line_anime');
     this.background = this.document.querySelector('#banner');
     
-    setTimeout(offsetBackground, 1);
-    setTimeout(bannerTextShow, 1000);
-    setTimeout(bannerLineSVGShow, 1000);
-    setTimeout(bannerTitleShow, 2000);
+    startPage();
+    setTimeout(bannerTitleShow, 1000);
 });
 
+function startPage() {
+    offsetBackground();
+    bannerLineSVGShow();
+    bannerTextShow();
+}
 
 function bannerTitleShow() {
     this.bannerTitle.style.opacity = 1;

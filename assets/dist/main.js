@@ -1,3 +1,15 @@
+const spaceFon = document.getElementById("banner");
+
+document.addEventListener("mousemove", function (e) { MoveBackground(e); });
+ 
+function MoveBackground(e)
+{
+   //let offsetX = (e.clientX / window.innerWidth * 30) - 15;
+   let offsetX = (e.clientX / window.innerWidth * 960) - 480;
+   let offsetY = (e.clientY / window.innerHeight * 10) - 5;
+ 
+   spaceFon.setAttribute("style", "background-position: " + offsetX + "px " + offsetY + "px;");
+}
 const bannerTitle = null;
 const bannerText = null;
 const bannerLineSVG = null;
@@ -10,12 +22,15 @@ window.addEventListener("load", function(event) {
     this.bannerLineSVG = this.document.querySelector('#banner-line_anime');
     this.background = this.document.querySelector('#banner');
     
-    setTimeout(offsetBackground, 1);
-    setTimeout(bannerTextShow, 1000);
-    setTimeout(bannerLineSVGShow, 1000);
-    setTimeout(bannerTitleShow, 2000);
+    startPage();
+    setTimeout(bannerTitleShow, 1000);
 });
 
+function startPage() {
+    offsetBackground();
+    bannerLineSVGShow();
+    bannerTextShow();
+}
 
 function bannerTitleShow() {
     this.bannerTitle.style.opacity = 1;
@@ -40,17 +55,6 @@ function offsetBackground(){
 
 
   
-const spaceFon = document.getElementById("banner");
-
-document.addEventListener("mousemove", function (e) { MoveBackground(e); });
- 
-function MoveBackground(e)
-{
-   let offsetX = (e.clientX / window.innerWidth * 30) - 15;
-   let offsetY = (e.clientY / window.innerHeight * 10) - 5;
- 
-   spaceFon.setAttribute("style", "background-position: " + offsetX + "px " + offsetY + "px;");
-}
 
 function animation(x) {
     x.classList.toggle("change");

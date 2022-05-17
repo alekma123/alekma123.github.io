@@ -7,15 +7,16 @@
     visibility: hidden;
     background: #F2E1C2;
     opacity: 0;
+    
+    &.popupBuyTicket_open{
     transition: opacity 0.5s ease, visibility 0.5s ease;
-        &.popupBuyTicket_open{
     -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
     -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
     -ms-transition: opacity 0.5s ease, visibility 0.5s ease;
     -o-transition: opacity 0.5s ease, visibility 0.5s ease;
 
-        visibility: visible;
-        opacity: 1;
+    visibility: visible;
+    opacity: 1;
     }
     .container{
         width: 100%;
